@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="RSBBB:jar" />
+      <artifact name="OSRSBot.main:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a934c9c-1df5-401c-be85-1862717f067b" name="Default Changelist" comment="Fix workspace" />
+    <list default="true" id="9a934c9c-1df5-401c-be85-1862717f067b" name="Default Changelist" comment="Fix workspace">
+      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/runelite/client/callback/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/runelite/client/callback/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/runelite/rsb/event/EventMulticaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/runelite/rsb/event/EventMulticaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/runelite/rsb/internal/InputManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/runelite/rsb/internal/InputManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/runelite/rsb/internal/input/VirtualMouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/runelite/rsb/internal/input/VirtualMouse.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,21 +101,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.329653" />
-    <property name="project.structure.side.proportion" value="0.0963939" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "/home/xom/Documents/Git/OSRSBot",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.40208668"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jaggar\IdeaProjects\TestRSB" />
@@ -160,6 +160,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.headlessBotRun" />
       <item itemvalue="Gradle.OsrsBot [botRun]" />
       <item itemvalue="Gradle.OsrsBot [headlessBotRun]" />
     </list>

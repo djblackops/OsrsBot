@@ -319,6 +319,7 @@ public class Hooks implements Callbacks
     {
         if (graphics == null)
         {
+            log.warn("null graphics ??????");
             return;
         }
 

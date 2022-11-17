@@ -50,6 +50,15 @@ public class InputManager {
 		releaseMouse(getX(), getY(), left);
 	}
 
+	public void scrollMouse(final boolean down) {
+		if (!bot.getMethodContext().mouse.isPresent()) {
+			return;
+		}
+		pressScroll(getX(), getY(), down);
+		sleepNoException(random(5,10));
+	}
+
+
 	/**
 	 * Drag the mouse from the current position to a certain other position.
 	 *
@@ -239,6 +248,16 @@ public class InputManager {
 		}
 		final MouseEvent me = new MouseEvent(getTarget(), MouseEvent.MOUSE_PRESSED, System.currentTimeMillis(), 0, x, y,
 				1, false, left ? MouseEvent.BUTTON1 : MouseEvent.BUTTON3);
+		bot.getMethodContext().virtualMouse.sendEvent(me);
+	}
+
+	private void pressScroll(final int x, final int y, final boolean down) {
+		if (!bot.getMethodContext().mouse.isPresent()) {
+			return;
+		}
+		final MouseWheelEvent me = new MouseWheelEvent(getTarget(), MouseWheelEvent.MOUSE_WHEEL,
+						System.currentTimeMillis(), 0, x, y, 0, false,
+						MouseWheelEvent.WHEEL_UNIT_SCROLL, 5, down ? 1 : -1);
 		bot.getMethodContext().virtualMouse.sendEvent(me);
 	}
 

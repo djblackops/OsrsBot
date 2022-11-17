@@ -2,9 +2,11 @@ package net.runelite.rsb.event;
 
 import net.runelite.rsb.event.events.RSEvent;
 import net.runelite.rsb.event.listener.PaintListener;
+import net.runelite.rsb.event.events.PaintEvent;
 import net.runelite.rsb.event.listener.TextPaintListener;
 import net.runelite.rsb.event.listener.MessageListener;
 import net.runelite.rsb.event.listener.CharacterMovedListener;
+import java.util.logging.Logger;
 
 import java.awt.event.*;
 import java.util.*;
@@ -237,6 +239,8 @@ public class EventMulticaster implements EventListener {
 					continue;
 				}
 				EventListener el = listeners.get(i);
+				System.out.println(e.toString());
+
 				if (e instanceof MouseEvent) {
 					MouseEvent me = (MouseEvent) e;
 					switch (me.getID()) {
@@ -291,6 +295,9 @@ public class EventMulticaster implements EventListener {
 				} else if (e instanceof RSEvent) {
 					RSEvent rse = (RSEvent) e;
 					rse.dispatch(el);
+				} else if (e instanceof PaintEvent) {
+					PaintEvent paintEvent = (PaintEvent) e;
+					paintEvent.dispatch(el);
 				}
 			}
 		}

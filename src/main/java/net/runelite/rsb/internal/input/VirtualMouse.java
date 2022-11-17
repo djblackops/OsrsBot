@@ -107,13 +107,13 @@ public class VirtualMouse {
         clientPressed = false;
     }
 
-    public MouseWheelEvent mouseWheelMoved(MouseWheelEvent e) {
-        try {
-            mouseWheelMoved(e);
-        } catch (AbstractMethodError ame) {
-            // it might not be implemented!
-        }
-        return e;
+    public final void mouseWheelMoved(MouseWheelEvent e) {
+//        try {
+//            mouseWheelMoved(e);
+//        } catch (AbstractMethodError ame) {
+//            // it might not be implemented!
+//        }
+//        return e;
     }
 
     public final void sendEvent(MouseEvent e) {
@@ -142,12 +142,13 @@ public class VirtualMouse {
                 clientPressed = false;
                 mouseReleased(e);
             } else if (e.getID() == MouseEvent.MOUSE_WHEEL) {
-                try {
-                    mouseWheelMoved((MouseWheelEvent) e);
-                } catch (AbstractMethodError ignored) {
-                    log.debug("Mouse event might not be implemented", ignored);
-                    // !
-                }
+                mouseWheelMoved((MouseWheelEvent) e);
+//                try {
+//                    mouseWheelMoved((MouseWheelEvent) e);
+//                } catch (AbstractMethodError ignored) {
+//                    log.debug("Mouse event might not be implemented", ignored);
+//                    // !
+//                }
             } else {
                 throw new InternalError(e.toString());
             }
